@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITM Maquinaria Pesada – Especialistas en Maquinaria Pesada</title>
+<style>
+/* ============================ TIPOGRAFÍAS AUTO-HOSPEDADAS ============================
+   Nada de Google Fonts ni CDNs: si el demo se abre sin red del lado del cliente, o el
+   CDN bloquea, el hero se cae. Todo sale de ./assets/. */
+@font-face{font-family:'Roboto';src:url('./assets/roboto-latin-var.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('./assets/robotoslab-latin-var.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'thim-ekits';src:url('./assets/thim-ekits.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'eduma-icon';src:url('./assets/eduma-icon.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'lp-icon';src:url('./assets/lp-icon.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+
+/* ============================ BASE ============================ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#fff;color:#606060;
+  font-family:'Roboto',Arial,Helvetica,sans-serif;font-size:15px;line-height:27px;font-weight:400;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+/* height:auto obligatorio: los atributos width/height de un <img> anulan cualquier
+   aspect-ratio y descuadran las grillas SOLO en móvil (ya nos pasó). */
+img{max-width:100%;height:auto;border:0;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-family:'Roboto Slab',Georgia,serif;color:#333;font-weight:600}
+ul{margin:0;padding:0;list-style:none}
+
+.container{max-width:1170px;margin:0 auto;padding:0 15px}
+
+/* iconos de fuente */
+.tk,.edu,.lpi{font-style:normal;font-weight:400;line-height:1;display:inline-block;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.tk{font-family:'thim-ekits'}
+.edu{font-family:'eduma-icon'}
+.lpi{font-family:'lp-icon'}
+.tk-phone::before{content:"\f095"}
+.tk-envelope::before{content:"\e919"}
+.tk-study1::before{content:"\e939"}
+.tk-speech::before{content:"\e9b0"}
+.tk-open-book1::before{content:"\e99b"}
+.edu-search::before{content:"\f002"}
+.edu-chevron-right::before{content:"\f054"}
+.lpi-file::before{content:"\f15b"}
+.lpi-students::before{content:"\f501"}
+
+/* ============================ HEADER (overlay sobre el hero) ============================ */
+.site-header{position:absolute;top:0;left:0;right:0;z-index:20}
+
+.toolbar{background:#222;height:50px}
+.toolbar .container{height:50px;display:flex;align-items:center;justify-content:space-between}
+.toolbar-info{display:flex;align-items:center;color:#ababab;font-size:13px;line-height:18.2px}
+.toolbar-info li{margin-right:12px;white-space:nowrap}
+.toolbar-info li:last-child{margin-right:0}
+.toolbar-info .tk{font-size:15px;margin-right:3px;vertical-align:-2px}
+.toolbar-login a{display:inline-block;color:#ababab;font-size:13px;line-height:18.2px;padding:0 3px 0 20px;white-space:nowrap}
+.toolbar-login svg{width:11px;height:12px;fill:currentColor;display:inline-block;vertical-align:-1px;margin-right:2px}
+
+.nav-bar{height:73px}
+.nav-bar .container{height:73px;display:flex;align-items:center}
+.brand{display:block;flex:0 0 auto;margin-right:auto}
+.brand img{width:180px}
+.nav-right{display:flex;align-items:center}
+.main-nav{display:flex;align-items:center;gap:4px}
+.main-nav>li{font-size:14px}
+.main-nav>li>a{
+  display:block;position:relative;color:#fff;font-size:14px;line-height:20px;font-weight:400;
+  text-transform:uppercase;padding:20px;
+}
+.main-nav>li.current>a::after{
+  content:"";position:absolute;bottom:11px;left:50%;transform:translateX(-50%);
+  width:40px;height:2px;background:#FFB606;
+}
+.nav-search{color:#fff;font-size:23px;line-height:20px;padding:20px 0 20px 15px;display:block}
+.burger{display:none;width:30px;padding:8px 0;background:none;border:0;cursor:pointer;margin-left:18px}
+.burger span{display:block;height:2px;background:#fff;margin:5px 0;border-radius:1px}
+
+/* ============================ HERO ============================ */
+.hero{
+  position:relative;height:900px;overflow:hidden;
+  background:#111 url('./assets/home-bg-main.jpg') center center / cover no-repeat;
+}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.hero-content{position:absolute;left:0;right:0;top:285.5px;z-index:5;text-align:center;padding:0 15px}
+.hero-title{
+  font-family:'Roboto Slab',Georgia,serif;font-size:70px;line-height:80px;font-weight:700;
+  color:#fff;margin:0 auto;padding-top:2px;max-width:1172px;
+}
+.hero-sub{
+  font-family:'Roboto',Arial,sans-serif;font-size:23px;line-height:35px;font-weight:400;
+  color:#fff;margin:18.5px auto 0;max-width:972px;
+}
+.hero-cta{
+  display:inline-block;margin-top:38px;background:#FFB606;color:#000;
+  font-family:'Roboto Slab',Georgia,serif;font-size:14px;line-height:24px;font-weight:500;
+  text-transform:uppercase;padding:9px 35px;transition:background .3s;
+}
+.hero-cta:hover{background:#e5a305}
+
+/* ============================ 3 TARJETAS SOBRE EL HERO ============================ */
+.features{position:relative;z-index:10;margin-top:-220px;padding:15px 0;margin-bottom:125px}
+.features .grid{display:flex;gap:30px}
+.feature{
+  flex:1 1 0;min-width:0;background:rgba(0,0,0,.6);padding:7px 0;
+  display:flex;align-items:flex-start;transition:background .3s;
+}
+.feature:hover{background:#000}
+.feature-icon{
+  flex:0 0 120px;width:120px;height:100px;line-height:100px;padding:0 15px 15px;
+  text-align:center;color:#FFB606;font-size:70px;
+}
+.feature-icon .tk{transition:transform .3s}
+.feature:hover .feature-icon .tk{transform:scale(1.05)}
+.feature-body{flex:0 0 210px;width:210px;margin-left:30px}
+.feature-body h3{
+  color:#fff;text-transform:uppercase;font-size:22.5px;line-height:31.5px;font-weight:600;
+  margin:20px 0 10px;word-wrap:break-word;
+}
+.feature-body a{color:#FFB606;font-family:'Roboto',Arial,sans-serif;font-size:15px;line-height:27px;display:inline-block}
+.feature-body a:hover{text-decoration:underline}
+.feature-body a .edu{font-size:11px;margin-left:5px;vertical-align:1px}
+
+/* ============================ ENCABEZADOS DE SECCIÓN ============================ */
+.sec-head{margin-bottom:26px}
+.sec-head h2{font-size:26px;line-height:34px;font-weight:600;color:#333}
+.sec-head p{margin:8px 0 0;font-size:14px;line-height:22px;color:#606060}
+.sec-head.center{text-align:center}
+
+/* ============================ CURSOS POPULARES ============================ */
+.courses{padding:24px 0 99px}
+.courses-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.carousel-nav{display:flex;gap:8px;flex:0 0 auto;margin-top:6px}
+.carousel-nav button{
+  width:30px;height:30px;border:1px solid #e5e5e5;background:#fff;color:#333;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;
+}
+.carousel-nav button:hover{background:#FFB606;border-color:#FFB606}
+.carousel-nav svg{width:9px;height:12px;fill:currentColor}
+
+.course-track{
+  display:flex;gap:30px;overflow-x:auto;scroll-behavior:smooth;
+  scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none;padding-bottom:2px;
+}
+.course-track::-webkit-scrollbar{display:none}
+.course-card{
+  flex:0 0 262.5px;width:262.5px;scroll-snap-align:start;
+  border:1px solid #ececec;background:#fff;text-align:center;
+  transition:box-shadow .3s;
+}
+.course-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.10)}
+.course-thumb{position:relative}
+.course-thumb img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.course-avatar{
+  width:50px;height:50px;border-radius:50%;overflow:hidden;background:#ccc;
+  position:absolute;left:50%;bottom:-25px;transform:translateX(-50%);border:0;
+}
+.course-avatar img{width:50px;height:50px}
+.course-body{padding:37px 16px 16px}
+.course-author{font-size:13px;line-height:18px;color:#8a8a8a}
+.course-title{
+  font-family:'Roboto Slab',Georgia,serif;font-size:16px;line-height:22px;font-weight:600;
+  color:#333;margin:12px 0 0;
+}
+.course-sep{width:32px;height:3px;background:#FFB606;margin:16px auto 0}
+.course-meta{
+  display:flex;align-items:center;gap:14px;margin-top:16px;
+  font-size:13px;line-height:18px;color:#8a8a8a;
+}
+.course-meta .lpi{font-size:13px;margin-right:5px;vertical-align:-1px}
+.course-price{margin-left:auto;white-space:nowrap}
+.course-price .origin{color:#bdbdbd;text-decoration:line-through;margin-right:6px}
+.course-price .now{color:#f04e23;font-weight:400}
+
+.btn-yellow{
+  display:inline-block;background:#FFB606;color:#000;
+  font-family:'Roboto Slab',Georgia,serif;font-size:13px;line-height:19px;font-weight:600;
+  letter-spacing:.4px;text-transform:uppercase;padding:13px 34px;transition:background .3s;
+}
+.btn-yellow:hover{background:#e5a305}
+.center{text-align:center}
+.mt-btn{margin-top:53px}
+
+/* ============================ ¿POR QUÉ ELEGIRNOS? ============================ */
+.why{background:#F3F3F3;padding:95px 0 87px}
+.why .grid{display:flex;gap:30px;margin-top:39px}
+.why-card{
+  flex:1 1 0;min-width:0;background:#fff;padding:56px 30px 46px;text-align:center;
+}
+.why-card svg{width:56px;height:45px;fill:#111;margin:0 auto 34px}
+.why-card h3{font-size:18px;line-height:26px;font-weight:600;color:#333}
+.why-card p{margin:14px 0 0;font-size:14px;line-height:26px;color:#707070}
+.why .mt-btn{margin-top:51px}
+
+.footer-gap{height:80px;background:#fff}
+
+/* ============================ FOOTER ============================ */
+.site-footer{background:#111;color:#9a9a9a;font-size:14px;line-height:24px}
+.footer-main{padding:66px 0 55px}
+.footer-logo{width:150px;margin-bottom:40px}
+.footer-list li{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
+.footer-list .tk,.footer-list svg{color:#FFB606;fill:#FFB606;font-size:15px;width:15px;height:16px;flex:0 0 15px;margin-top:4px}
+.footer-social{margin-top:26px}
+.footer-social svg{width:17px;height:17px;fill:#fff}
+.footer-bottom{border-top:1px solid #2b2b2b;padding:37px 0}
+.footer-bottom p{margin:0;font-size:14px;color:#8d8d8d}
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width:1199px){
+  .hero{height:760px}
+  .hero-content{top:210px}
+  .hero-title{font-size:56px;line-height:66px}
+  .hero-sub{font-size:20px;line-height:31px;max-width:760px}
+  .features{margin-top:-190px;margin-bottom:90px}
+  .feature-icon{flex:0 0 96px;width:96px;font-size:56px;padding:0 12px 12px}
+  .feature-body{flex:1 1 auto;width:auto;margin-left:16px;padding-right:16px}
+  .feature-body h3{font-size:19px;line-height:27px}
+  .main-nav>li>a{padding:20px 12px}
+}
+@media (max-width:991px){
+  .main-nav,.nav-search{display:none}
+  .burger{display:block}
+  .hero{height:640px}
+  .hero-content{top:180px}
+  .hero-title{font-size:44px;line-height:54px}
+  .features{margin-top:-170px;margin-bottom:70px}
+  .features .grid{flex-wrap:wrap}
+  .feature{flex:1 1 100%}
+  .why .grid{flex-wrap:wrap}
+  .why-card{flex:1 1 100%}
+}
+@media (max-width:767px){
+  .toolbar-info li:first-child{display:none}
+  .toolbar-info li{font-size:0;margin-right:18px}
+  .toolbar-info .tk{font-size:16px;margin-right:0}
+  .toolbar-login a{padding-left:0;font-size:14px}
+  .toolbar-login svg{width:14px;height:15px;margin-right:6px}
+
+  .brand img{width:150px}
+  .nav-bar{height:66px}
+  .nav-bar .container{height:66px}
+
+  .hero{height:520px;background-position:14% center}
+  .hero::after{background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.52) 42%,rgba(0,0,0,.38) 100%)}
+  .hero-content{top:auto;bottom:56px;padding:0 24px;text-align:left}
+  .hero-title{font-size:34px;line-height:42px;padding-top:0}
+  .hero-sub{font-size:16px;line-height:26px;margin-top:14px}
+  .hero-cta{margin-top:24px;padding:11px 26px;font-size:13px}
+
+  .features{margin-top:0;margin-bottom:0;background:#151515;padding:22px 0 8px}
+  .features .grid{gap:14px}
+  .feature{background:rgba(255,255,255,.045);padding:12px 0}
+  .feature-icon{flex:0 0 86px;width:86px;height:auto;line-height:1;font-size:46px;padding:6px 10px 0}
+  .feature-body h3{font-size:17px;line-height:24px;margin:0 0 6px}
+  .feature-body a{font-size:14px}
+
+  .courses{padding:46px 0 56px}
+  .sec-head h2{font-size:23px;line-height:30px}
+  .carousel-nav{display:none}
+  .course-track{gap:16px;margin:0 -15px;padding:0 15px 4px;scroll-padding-left:15px}
+  .course-card{flex:0 0 250px;width:250px}
+  .mt-btn{margin-top:34px}
+
+  .why{padding:52px 0 56px}
+  .why .grid{gap:16px;margin-top:28px}
+  .why-card{padding:40px 24px 34px}
+  .why .mt-btn{margin-top:32px}
+
+  .footer-gap{height:40px}
+  .footer-main{padding:44px 0 40px}
+  .footer-logo{width:130px;margin-bottom:30px}
+}
+@media (max-width:400px){
+  .hero{height:500px}
+  .hero-title{font-size:30px;line-height:38px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="toolbar">
+    <div class="container">
+      <ul class="toolbar-info">
+        <li>Contáctanos:</li>
+        <li><a href="#contacto"><i class="tk tk-phone" aria-hidden="true"></i> (51) 981 089 772</a></li>
+        <li><i class="tk tk-envelope" aria-hidden="true"></i> cursos@itm.edu.pe</li>
+      </ul>
+      <div class="toolbar-login">
+        <a href="#inicio"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>Iniciar sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="container">
+      <a class="brand" href="#inicio" title="ITM Maquinaria Pesada">
+        <img src="./assets/itm-white-logo-1.svg" alt="ITM Campus Virtual" width="180" height="53">
+      </a>
+      <div class="nav-right">
+      <nav>
+        <ul class="main-nav">
+          <li class="current"><a href="#inicio">Inicio</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#comunidad">Comunidad Técnica</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="nav-search" href="#cursos" aria-label="Buscar cursos"><i class="edu edu-search" aria-hidden="true"></i></a>
+      <button class="burger" type="button" aria-label="Menú" id="burger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1 class="hero-title">Aprende de expertos en la industria</h1>
+    <p class="hero-sub">Desarrolla tu carrera profesional a tu propio ritmo mediante cursos de formación flexibles y personalizados, diseñados para fortalecer tu confianza y ayudarte a crecer.</p>
+    <a class="hero-cta" href="#cursos">Ver biblioteca de cursos</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="grid">
+      <div class="feature">
+        <div class="feature-icon"><i class="tk tk-study1" aria-hidden="true"></i></div>
+        <div class="feature-body">
+          <h3>Líderes en la industria</h3>
+          <a href="#por-que">Ver más <i class="edu edu-chevron-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="tk tk-speech" aria-hidden="true"></i></div>
+        <div class="feature-body">
+          <h3>Aprende con cursos en línea</h3>
+          <a href="#cursos">Ver más <i class="edu edu-chevron-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="tk tk-open-book1" aria-hidden="true"></i></div>
+        <div class="feature-body">
+          <h3>Biblioteca técnica</h3>
+          <a href="#cursos">Ver más <i class="edu edu-chevron-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="courses" id="cursos">
+  <div class="container">
+    <div class="courses-top">
+      <div class="sec-head">
+        <h2>Cursos populares</h2>
+        <p>Aprendizaje ilimitado, más posibilidades</p>
+      </div>
+      <div class="carousel-nav">
+        <button type="button" id="cprev" aria-label="Anterior"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg></button>
+        <button type="button" id="cnext" aria-label="Siguiente"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></button>
+      </div>
+    </div>
+
+    <div class="course-track" id="ctrack">
+      <article class="course-card">
+        <div class="course-thumb">
+          <img src="./assets/curso-mantenimiento-operadores-400x300.jpg" alt="Mantenimiento de Equipos Pesados para Operadores" width="400" height="300" loading="lazy">
+          <span class="course-avatar"><img src="./assets/0fe15b50965d1fad4431b67c2ef0a16ec029e0afe73d9e60c16a.jpg" alt="" width="50" height="50" loading="lazy"></span>
+        </div>
+        <div class="course-body">
+          <div class="course-author">cursos_admin</div>
+          <h3 class="course-title">Mantenimiento de Equipos Pesados para Operadores</h3>
+          <div class="course-sep"></div>
+          <div class="course-meta">
+            <span><i class="lpi lpi-file" aria-hidden="true"></i>19</span>
+            <span><i class="lpi lpi-students" aria-hidden="true"></i>1</span>
+            <span class="course-price"><span class="origin">$150.00</span><span class="now">$120.00</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-thumb">
+          <img src="./assets/demo_image.jpg" alt="Curso de Lectura de Planos Hidráulicos" width="270" height="203" loading="lazy">
+          <span class="course-avatar"><img src="./assets/0fe15b50965d1fad4431b67c2ef0a16ec029e0afe73d9e60c16a.jpg" alt="" width="50" height="50" loading="lazy"></span>
+        </div>
+        <div class="course-body">
+          <div class="course-author">cursos_admin</div>
+          <h3 class="course-title">Curso de Lectura de Planos Hidráulicos</h3>
+          <div class="course-sep"></div>
+          <div class="course-meta">
+            <span><i class="lpi lpi-file" aria-hidden="true"></i>20</span>
+            <span><i class="lpi lpi-students" aria-hidden="true"></i>1</span>
+            <span class="course-price"><span class="origin">$150.00</span><span class="now">$120.00</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-thumb">
+          <img src="./assets/seminario-cat-336-next-gen-400x300.jpg" alt="Seminario: Excavadora Hidráulica CAT 336 Next Gen" width="400" height="300" loading="lazy">
+          <span class="course-avatar"><img src="./assets/e328abf7e551ee369a8f323220a78ccb5d3667877c721fc4647e.jpg" alt="" width="50" height="50" loading="lazy"></span>
+        </div>
+        <div class="course-body">
+          <div class="course-author">Sixto Guarniz A.</div>
+          <h3 class="course-title">Seminario: Excavadora Hidráulica CAT 336 Next Gen</h3>
+          <div class="course-sep"></div>
+          <div class="course-meta">
+            <span><i class="lpi lpi-file" aria-hidden="true"></i>3</span>
+            <span><i class="lpi lpi-students" aria-hidden="true"></i>0</span>
+            <span class="course-price"><span class="origin">$20.00</span><span class="now">$15.00</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-thumb">
+          <img src="./assets/seminario-cat-797f-400x300.jpg" alt="Seminario: Camión Minero CAT 797F" width="400" height="300" loading="lazy">
+          <span class="course-avatar"><img src="./assets/e328abf7e551ee369a8f323220a78ccb5d3667877c721fc4647e.jpg" alt="" width="50" height="50" loading="lazy"></span>
+        </div>
+        <div class="course-body">
+          <div class="course-author">Sixto Guarniz A.</div>
+          <h3 class="course-title">Seminario: Camión Minero CAT 797F</h3>
+          <div class="course-sep"></div>
+          <div class="course-meta">
+            <span><i class="lpi lpi-file" aria-hidden="true"></i>3</span>
+            <span><i class="lpi lpi-students" aria-hidden="true"></i>0</span>
+            <span class="course-price"><span class="origin">$20.00</span><span class="now">$15.00</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-thumb">
+          <img src="./assets/curso-hidraulica-aplicada-400x300.jpg" alt="Hidráulica aplicada a Equipos Pesados" width="400" height="300" loading="lazy">
+          <span class="course-avatar"><img src="./assets/e328abf7e551ee369a8f323220a78ccb5d3667877c721fc4647e.jpg" alt="" width="50" height="50" loading="lazy"></span>
+        </div>
+        <div class="course-body">
+          <div class="course-author">Sixto Guarniz A.</div>
+          <h3 class="course-title">Hidráulica aplicada a Equipos Pesados</h3>
+          <div class="course-sep"></div>
+          <div class="course-meta">
+            <span><i class="lpi lpi-file" aria-hidden="true"></i>15</span>
+            <span><i class="lpi lpi-students" aria-hidden="true"></i>1</span>
+            <span class="course-price"><span class="origin">$90.00</span><span class="now">$80.00</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-thumb">
+          <img src="./assets/seminario-cat-962h-400x300.jpg" alt="Seminario: Cargador de Ruedas CAT 962H" width="400" height="300" loading="lazy">
+          <span class="course-avatar"><img src="./assets/0fe15b50965d1fad4431b67c2ef0a16ec029e0afe73d9e60c16a.jpg" alt="" width="50" height="50" loading="lazy"></span>
+        </div>
+        <div class="course-body">
+          <div class="course-author">cursos_admin</div>
+          <h3 class="course-title">Seminario: Cargador de Ruedas CAT 962H</h3>
+          <div class="course-sep"></div>
+          <div class="course-meta">
+            <span><i class="lpi lpi-file" aria-hidden="true"></i>4</span>
+            <span><i class="lpi lpi-students" aria-hidden="true"></i>0</span>
+            <span class="course-price"><span class="origin">$35.00</span><span class="now">$20.00</span></span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="center mt-btn"><a class="btn-yellow" href="#cursos">Ver todos los cursos</a></div>
+  </div>
+</section>
+
+<section class="why" id="por-que">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>¿Por qué elegirnos?</h2>
+      <p>Una elección que marca la diferencia.</p>
+    </div>
+    <div class="grid">
+      <div class="why-card">
+        <svg viewBox="0 0 640 512" aria-hidden="true"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"></path></svg>
+        <h3>Aprende de expertos</h3>
+        <p>El entrenamiento está a cargo de profesionales con años experiencia.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 448 512" aria-hidden="true" style="width:44px"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg>
+        <h3>Currícula Caterpillar</h3>
+        <p>El material usado para la enseñanza es autorizado y distribuido por Caterpillar.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 640 512" aria-hidden="true"><path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path></svg>
+        <h3>Certificación oficial</h3>
+        <p>Nuestra certificación es regulada por el Ministerio de Educación del Perú.</p>
+      </div>
+    </div>
+    <div class="center mt-btn"><a class="btn-yellow" href="#cursos">Ver más</a></div>
+  </div>
+</section>
+
+<div class="footer-gap"></div>
+
+<footer class="site-footer" id="contacto">
+  <div class="footer-main">
+    <div class="container">
+      <img class="footer-logo" src="./assets/LOGO-ITM-150x50.png" alt="ITM" width="150" height="50" loading="lazy">
+      <ul class="footer-list">
+        <li><i class="tk tk-phone" aria-hidden="true"></i><span>(51) 981 089 772</span></li>
+        <li><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg><span>Av. Ramón Castilla 1110 - Trujillo - Perú</span></li>
+        <li><i class="tk tk-envelope" aria-hidden="true"></i><span>cursos@itm.edu.pe</span></li>
+      </ul>
+      <div class="footer-social">
+        <a href="#contacto" aria-label="Facebook"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2025 ITM. Todos los derechos reservados.</p></div>
+  </div>
+</footer>
+
+<script>
+/* Carrusel de cursos: sin librerías, solo scroll nativo. */
+(function(){
+  var t=document.getElementById('ctrack');
+  if(!t)return;
+  function step(){var c=t.querySelector('.course-card');return c?c.getBoundingClientRect().width+30:290;}
+  var p=document.getElementById('cprev'),n=document.getElementById('cnext');
+  if(p)p.addEventListener('click',function(){t.scrollBy({left:-step(),behavior:'smooth'});});
+  if(n)n.addEventListener('click',function(){t.scrollBy({left:step(),behavior:'smooth'});});
+})();
+</script>
+  <div data-ijv-demo-badge style="position:relative;z-index:1;padding:14px 16px 90px;text-align:center;font:400 12px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#94a3b8;background:#0f172a">
+    Demo preparada por <a href="https://ijvagency.com/" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:underline">IJV Agency</a> para ITM Maquinaria Pesada — sitio de muestra, no es la web oficial.
+  </div>
+  <script>
+window["itmtractorAgentConfig"] = Object.assign(window["itmtractorAgentConfig"] || {}, { webhook: "https://meta.ijvagency.com/webhook/itmtractor-demo-agent", leadsWebhook: "https://meta.ijvagency.com/webhook/itmtractor-demo-leads" });
+/* ============================================================================
+ * ITM MAQUINARIA PESADA — Widget de chat embebible (IJV Agency)
+ * ----------------------------------------------------------------------------
+ * Generado por IJV Factory — NO editar a mano: cambios van al factory.config.json
+ * y se regenera. Patrón canónico extraído de mmdent/widget/agent.js.
+ *
+ * Distribución recomendada vía jsDelivr (repo público):
+ *   https://cdn.jsdelivr.net/gh/nachojr2003/itmtractor-site@main/widget/agent.js
+ *
+ * Uso en el sitio del cliente:
+ *   <script>
+ *     window.itmtractorAgentConfig = { }; // overrides opcionales — los defaults van embebidos
+ *   <\/script>
+ *   <script src=".../widget/agent.js" defer><\/script>
+ *
+ * Sin dependencias externas. IIFE puro, vanilla JS (ES5).
+ * ============================================================================ */
+(function () {
+  'use strict';
+
+  /* ---------------- Config con DEFAULTS embebidos (regla #11: si el
+   * integrador pasa config parcial, NADA queda undefined) ---------------- */
+  var DEFAULTS = {
+    n8nBase:        "https://meta.ijvagency.com",
+    webhook:        null,
+    leadsWebhook:   null,
+    privacyUrl:     '/politica-privacidad',
+    logoUrl:        "https://itm.edu.pe/wp-content/uploads/2025/04/LOGO-ITM.png",
+    primary:        '#FFB606',
+    secondary:      '#111111',
+    accent:         '#F5F5F5',
+    fontFamily:     "Inter,system-ui,-apple-system,'Segoe UI',sans-serif,'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji'",
+    timeoutMs:      45000,   /* >= 30s: queries con RAG completo cortan a 15s (regla #10).
+                              * 45000 y no 40000: la espera real que ve el usuario es
+                              * timeoutMs × (1 + maxRetries), así que el knob que importa
+                              * es maxRetries. Un turno vivo nunca llega a 40s (RAG p99
+                              * ~10s + self-call del retry-on-empty ~5s, regla #84): entre
+                              * 40 y 45 solo cambia cuánto tarda en rendirse lo ya muerto. */
+    maxRetries:     1,
+    typewriter:     true,
+    typewriterCps:  90,
+    agentName:      "el asistente de ITM",
+    clientName:     "ITM Maquinaria Pesada",
+    /* Subtítulo del encabezado: dice a QUÉ ATIENDE el agente, nunca qué es. Una
+     * etiqueta de bot aquí lo delata antes de que escriba una palabra (regla
+     * #114). Se personaliza con `agente.subtitulo_widget` en el config. */
+    headerSubtitle: "Cursos Caterpillar",
+
+    whatsappNumber: "+51948000372",
+    whatsappLink:   "https://wa.me/51948000372",
+
+
+    welcomeMessage: "Hola, soy el asistente de **ITM Maquinaria Pesada** — Trujillo.\nTe respondo al toque sobre nuestros **cursos y seminarios técnicos en maquinaria pesada Caterpillar**: contenido, inversión e inscripción.\nDime qué curso te interesa o qué quieres aprender (**mantenimiento, hidráulica, análisis de fallas, operación de equipos**) y te paso el detalle."
+  };
+  var CFG = window.itmtractorAgentConfig = window.itmtractorAgentConfig || {};
+  for (var k in DEFAULTS) { if (CFG[k] === undefined || CFG[k] === null) CFG[k] = DEFAULTS[k]; }
+  if (!CFG.webhook)      CFG.webhook      = CFG.n8nBase + '/webhook/itmtractor-agent';
+  if (!CFG.leadsWebhook) CFG.leadsWebhook = CFG.n8nBase + '/webhook/itmtractor-leads';
+
+  var QUICK_BUTTONS = [{"label":"Ver cursos","mensaje":"Quiero ver qué cursos y seminarios tienen"},{"label":"Precio e inscripción","mensaje":"¿Cuánto cuesta y cómo me inscribo?"},{"label":"Certificado","mensaje":"¿El certificado es oficial y quién lo avala?"}];
+
+  /* ---------------- Utilidades ---------------- */
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function parseMd(text) {
+    var s = escapeHtml(text);
+    s = s.replace(/```([\s\S]*?)```/g, function (_, c) { return '<pre>' + c + '</pre>'; });
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    s = s.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/(^|\s)(https?:\/\/[^\s<]+)/g,
+      '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+    s = s.replace(/(^|\n)- (.+)/g, '$1<li>$2</li>');
+    s = s.replace(/(<li>[\s\S]*?<\/li>)(?!\s*<li>)/g, '<ul>$1</ul>');
+    /* Regla #27: strip de placeholders alucinados por el LLM.
+       Restringido a placeholders CONOCIDOS: un strip genérico \[[a-z_]+\]
+       borraba texto legítimo entre corchetes (ej. "[PDF]", "[borrador]"). */
+    s = s.replace(/\{\{[^}]+\}\}/g, '').replace(/\{first_name\}/gi, '')
+      .replace(/\[(nombre|name|first_name|usuario|user)\]/gi, '');
+    /* Segunda capa: MARCAS INTERNAS del sistema. El nodo Finalize del workflow ya
+       las strippea; esto es la red por si un turno las deja pasar — el usuario
+       jamás debe leer "[CONSENT_OK]" ni "[PENDIENTE CLIENTE: precio]".
+       Lista EXPLÍCITA a propósito: un \[[A-Z_]{3,}\] genérico borraría texto
+       legítimo del negocio ("[PDF]", "[IVA]", "[RUC]") — misma lección que el
+       strip de placeholders de arriba (regla #27). Marca nueva en un workflow
+       ⇒ agregarla también aquí. */
+    s = s.replace(/\[\/?(CONSENT_OK|CONSENT|HANDOFF|ESCALATED|ESCALAR|LEAD_OK|NO_KB|IMG:[^\]]*|PENDIENTE[^\]]*)\]/gi, '');
+    s = s.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>');
+    return '<p>' + s + '</p>';
+  }
+  function uuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  /* Regla #61: TTL de inactividad — Cmd+Shift+R NO limpia sessionStorage; sin
+   * TTL la Simple Memory del agente arrastra la conversación vieja. */
+  var SESSION_TTL_MS = 30 * 60 * 1000;
+  var SS_PREFIX = 'itmtractor_';
+  function getSessionId() {
+    var s = sessionStorage.getItem(SS_PREFIX + 'session_id');
+    var last = parseInt(sessionStorage.getItem(SS_PREFIX + 'session_last') || '0', 10);
+    var now = Date.now();
+    if (!s || (last && (now - last) > SESSION_TTL_MS)) {
+      s = uuid();
+      sessionStorage.setItem(SS_PREFIX + 'session_id', s);
+      sessionStorage.removeItem(SS_PREFIX + 'messages');
+    }
+    sessionStorage.setItem(SS_PREFIX + 'session_last', String(now));
+    return s;
+  }
+  function resetSession() {
+    sessionStorage.removeItem(SS_PREFIX + 'session_id');
+    sessionStorage.removeItem(SS_PREFIX + 'session_last');
+    sessionStorage.removeItem(SS_PREFIX + 'messages');
+    return getSessionId();
+  }
+
+  /* Persistencia de mensajes: sobreviven al refresh, no al cerrar la pestaña */
+  function loadMessages() {
+    try { return JSON.parse(sessionStorage.getItem(SS_PREFIX + 'messages') || '[]'); }
+    catch (e) { return []; }
+  }
+  function saveMessage(role, text) {
+    try {
+      var m = loadMessages();
+      m.push({ role: role, text: text });
+      if (m.length > 60) m = m.slice(-60);
+      sessionStorage.setItem(SS_PREFIX + 'messages', JSON.stringify(m));
+    } catch (e) { /* quota: silencioso */ }
+  }
+
+  /* ---------------- CSS inyectado ----------------
+   * Regla #15: CSS defensivo para <img> (librerías emoji del sitio convierten
+   * unicode a <img>; sin esto un 👋 sale de 600px) + fuentes emoji en la pila. */
+  var CSS = [
+    /* --ijv-text es FIJO a proposito (regla de Nacho): las letras de los mensajes
+     * del agente van SIEMPRE en negro, nunca en un color de marca. El secundario
+     * queda solo para usos decorativos (gradiente del cal, toast). */
+    ':root{--ijv-primary:' + CFG.primary + ';--ijv-secondary:' + CFG.secondary + ';--ijv-accent:' + CFG.accent + ';--ijv-text:#111111;}',
+    '.ijv-launcher{position:fixed;bottom:22px;right:22px;height:60px;padding:0 22px;border-radius:30px;background:#fff;color:var(--ijv-primary);border:0;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;z-index:2147483000;transition:transform .2s ease}',
+    '.ijv-launcher:hover{transform:scale(1.05)}',
+    '.ijv-launcher img{height:36px;width:auto;display:block;object-fit:contain}',
+    '.ijv-root *,.ijv-root *::before,.ijv-root *::after{box-sizing:border-box}',
+    '.ijv-root{position:fixed;bottom:100px;right:22px;width:380px;max-width:calc(100vw - 24px);height:600px;max-height:calc(100vh - 120px);background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden;z-index:2147483000;font-family:' + CFG.fontFamily + ';color:var(--ijv-text);transform:translateY(20px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .2s ease}',
+    '.ijv-root.ijv-open{transform:translateY(0);opacity:1;pointer-events:auto}',
+    '.ijv-head{background:var(--ijv-primary);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}',
+    '.ijv-head img{height:44px;width:auto;background:#fff;border-radius:10px;padding:6px 10px;flex-shrink:0;display:block}',
+    '.ijv-head .ijv-title{font-weight:700;font-size:15px;line-height:1.2}',
+    '.ijv-head .ijv-sub{font-size:12px;opacity:.85}',
+    '.ijv-head .ijv-actions{margin-left:auto;display:flex;gap:6px}',
+    '.ijv-head button{background:rgba(255,255,255,.15);border:0;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px}',
+    '.ijv-head button:hover{background:rgba(255,255,255,.28)}',
+    '.ijv-msgs{flex:1;overflow-y:auto;padding:16px;background:#FAFAFA;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}',
+    '.ijv-msg{max-width:84%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.45;word-wrap:break-word}',
+    '.ijv-msg p{margin:0 0 6px}.ijv-msg p:last-child{margin:0}',
+    '.ijv-msg ul{margin:4px 0 4px 18px;padding:0}.ijv-msg li{margin:2px 0}',
+    '.ijv-msg a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-msg code{background:rgba(0,0,0,.08);padding:1px 5px;border-radius:4px;font-size:13px}',
+    '.ijv-msg img{max-width:1.2em!important;max-height:1.2em!important;display:inline-block!important;vertical-align:text-bottom!important}',
+    '.ijv-bot{align-self:flex-start;background:#fff;border:1px solid #E8E8E8;border-top-left-radius:4px;color:var(--ijv-text)}',
+    '.ijv-user{align-self:flex-end;background:var(--ijv-primary);color:#fff;border-top-right-radius:4px}',
+    '.ijv-user a{color:#fff}',
+    '.ijv-typing{align-self:flex-start;display:flex;gap:4px;padding:10px 14px;background:#fff;border:1px solid #E8E8E8;border-radius:14px;border-top-left-radius:4px}',
+    '.ijv-typing span{width:7px;height:7px;background:var(--ijv-primary);border-radius:50%;opacity:.4;animation:ijvBlink 1.2s infinite}',
+    '.ijv-typing span:nth-child(2){animation-delay:.2s}.ijv-typing span:nth-child(3){animation-delay:.4s}',
+    '@keyframes ijvBlink{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}',
+    '.ijv-cta{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}',
+    '.ijv-pill{background:var(--ijv-accent);color:var(--ijv-primary);border:1px solid rgba(0,0,0,.08);padding:6px 12px;border-radius:999px;font-size:12.5px;cursor:pointer;font-weight:600;transition:all .15s;font-family:inherit}',
+    '.ijv-pill:hover{background:var(--ijv-primary);color:#fff;border-color:var(--ijv-primary)}',
+    '.ijv-form{background:#fff;border:1px solid #E8E8E8;border-radius:12px;padding:14px;margin:8px 0;display:flex;flex-direction:column;gap:8px;align-self:stretch}',
+    '.ijv-form h4{margin:0 0 4px;font-size:14px;color:var(--ijv-text)}',
+    '.ijv-form input,.ijv-form textarea{width:100%;padding:9px 11px;border:1px solid #D8D8D8;border-radius:8px;font-size:13.5px;font-family:inherit;color:var(--ijv-text);background:#fff}',
+    '.ijv-form input:focus,.ijv-form textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-form button{background:var(--ijv-primary);color:#fff;border:0;padding:10px;border-radius:8px;font-weight:600;cursor:pointer;font-size:13.5px;font-family:inherit}',
+    '.ijv-form button:disabled{opacity:.6;cursor:wait}',
+    '.ijv-form .ijv-hp{display:none!important}',
+    '.ijv-form .ijv-legal{margin:0;font-size:10.5px;line-height:1.45;color:#8a8a8a}',
+    '.ijv-form .ijv-legal a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-cal{background:linear-gradient(135deg,var(--ijv-primary),var(--ijv-secondary));border-radius:12px;padding:16px;margin:8px 0;align-self:stretch;color:#fff}',
+    '.ijv-cal p{margin:0 0 10px;font-size:13.5px;line-height:1.45}',
+    '.ijv-cal a{display:inline-block;background:#fff;color:var(--ijv-primary);font-weight:700;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:13.5px}',
+    '.ijv-input{display:flex;gap:8px;padding:12px;border-top:1px solid #E8E8E8;background:#fff;align-items:flex-end}',
+    '.ijv-input textarea{flex:1;border:1px solid #D8D8D8;border-radius:12px;padding:10px 12px;font-family:inherit;font-size:14px;resize:none;max-height:100px;min-height:40px;color:var(--ijv-text)}',
+    '.ijv-input textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-input button{background:var(--ijv-primary);color:#fff;border:0;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}',
+    '.ijv-input button:disabled{opacity:.5;cursor:not-allowed}',
+    '.ijv-input button svg{width:18px;height:18px;fill:#fff}',
+    '.ijv-foot{padding:8px 12px 10px;background:#fff;border-top:1px solid #E8E8E8;text-align:center;font-size:10.5px;color:#8a8a8a;line-height:1.5}',
+    '.ijv-foot a{color:var(--ijv-primary);text-decoration:none;font-weight:600}',
+    '.ijv-foot a:hover{text-decoration:underline}',
+    '.ijv-foot .ijv-foot-powered{display:block;margin-top:3px;font-size:10px;color:#9a9a9a}',
+    '.ijv-foot .ijv-foot-powered a{color:#9a9a9a;font-weight:500}',
+    '.ijv-toast{position:absolute;top:70px;left:50%;transform:translateX(-50%);background:var(--ijv-secondary);color:#fff;padding:8px 14px;border-radius:8px;font-size:12.5px;opacity:0;transition:opacity .2s;pointer-events:none}',
+    '.ijv-toast.ijv-show{opacity:.95}',
+    '@media (max-width:480px){.ijv-root{width:calc(100vw - 16px);height:calc(100vh - 90px);bottom:80px;right:8px}.ijv-launcher{bottom:16px;right:16px;height:54px;padding:0 18px}.ijv-launcher img{height:32px}}'
+  ].join('');
+
+  /* ---------------- Render de la UI ---------------- */
+  var styleEl = document.createElement('style');
+  styleEl.textContent = CSS;
+  document.head.appendChild(styleEl);
+
+  var launcher = document.createElement('button');
+  launcher.className = 'ijv-launcher';
+  launcher.setAttribute('aria-label', 'Abrir chat ' + CFG.clientName);
+  launcher.innerHTML = '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />';
+  document.body.appendChild(launcher);
+
+  var root = document.createElement('div');
+  root.className = 'ijv-root';
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-label', 'Chat de ' + CFG.clientName);
+  root.innerHTML =
+    '<div class="ijv-head">' +
+      '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />' +
+      '<div>' +
+        '<div class="ijv-title">' + escapeHtml(CFG.clientName) + '</div>' +
+        '<div class="ijv-sub">' + escapeHtml(CFG.agentName) + ' · ' + escapeHtml(CFG.headerSubtitle) + '</div>' +
+      '</div>' +
+      '<div class="ijv-actions">' +
+        '<button type="button" class="ijv-reset" aria-label="Reiniciar conversación" title="Nueva conversación">⟳</button>' +
+        '<button type="button" class="ijv-close" aria-label="Cerrar chat" title="Cerrar">✕</button>' +
+      '</div>' +
+      '<div class="ijv-toast">Conversación reiniciada</div>' +
+    '</div>' +
+    '<div class="ijv-msgs" aria-live="polite" aria-atomic="false"></div>' +
+    '<div class="ijv-input">' +
+      '<textarea rows="1" maxlength="2000" placeholder="Escribe tu mensaje…" aria-label="Escribe tu mensaje"></textarea>' +
+      '<button type="button" class="ijv-send" aria-label="Enviar">' +
+        '<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>' +
+      '</button>' +
+    '</div>' +
+    '<div class="ijv-foot">' +
+      'Al usar este chat aceptas la <a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">política de privacidad</a> de ' + escapeHtml(CFG.clientName) + '.' +
+      '<span class="ijv-foot-powered"><a href="https://ijvagency.com/" target="_blank" rel="noopener">Powered by IJV</a></span>' +
+    '</div>';
+  document.body.appendChild(root);
+
+  /* Logo con fallback: si la URL del logo falla (típico en demos con dominio
+   * ficticio, o si el sitio del cliente mueve el archivo), el launcher cae a un
+   * ícono de chat y el header oculta la imagen rota — nunca se ve un img roto. */
+  var CHAT_ICON = '<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.94 2 11.5c0 2.3 1.13 4.38 2.97 5.88L4 21l4.02-1.6c1.2.38 2.5.6 3.98.6 5.52 0 10-3.94 10-8.5S17.52 3 12 3z"/></svg>';
+  var lImg = launcher.querySelector('img');
+  if (lImg) {
+    var lFallback = function () { launcher.innerHTML = CHAT_ICON; };
+    lImg.onerror = lFallback;
+    if (lImg.complete && lImg.naturalWidth === 0) lFallback();
+  }
+  var hImg = root.querySelector('.ijv-head img');
+  if (hImg) {
+    var hFallback = function () { hImg.style.display = 'none'; };
+    hImg.onerror = hFallback;
+    if (hImg.complete && hImg.naturalWidth === 0) hFallback();
+  }
+
+  var $msgs  = root.querySelector('.ijv-msgs');
+  var $input = root.querySelector('textarea');
+  var $send  = root.querySelector('.ijv-send');
+  var $close = root.querySelector('.ijv-close');
+  var $reset = root.querySelector('.ijv-reset');
+  var $toast = root.querySelector('.ijv-toast');
+
+  var isOpen = false;
+  var isBusy = false;
+  var welcomed = false;
+
+  /* Regla #19: rAF obligatorio — sin él Safari/iOS deja el scroll anclado
+   * arriba mientras el bot escribe. */
+  function scrollToBottom() {
+    $msgs.scrollTop = $msgs.scrollHeight;
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { $msgs.scrollTop = $msgs.scrollHeight; });
+    }
+  }
+  function showToast(t) {
+    $toast.textContent = t;
+    $toast.classList.add('ijv-show');
+    setTimeout(function () { $toast.classList.remove('ijv-show'); }, 1800);
+  }
+  function pushUser(text, opts) {
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-user';
+    div.textContent = text;
+    $msgs.appendChild(div);
+    scrollToBottom();
+    if (!opts || !opts.skipSave) saveMessage('user', text);
+  }
+  function pushBot(text, opts) {
+    opts = opts || {};
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-bot';
+    $msgs.appendChild(div);
+    if (!opts.skipSave) saveMessage('bot', text);
+    if (CFG.typewriter && !opts.instant) {
+      typewrite(div, text);
+    } else {
+      div.innerHTML = parseMd(text);
+      scrollToBottom();
+    }
+    return div;
+  }
+  /* Typewriter: re-parsea markdown en cada step y scrollea con rAF (regla #19) */
+  function typewrite(div, fullText) {
+    var i = 0;
+    var step = Math.max(1, Math.round(CFG.typewriterCps / 30));
+    var timer = setInterval(function () {
+      i += step;
+      if (i >= fullText.length) {
+        clearInterval(timer);
+        div.innerHTML = parseMd(fullText);
+        scrollToBottom();
+        return;
+      }
+      div.innerHTML = parseMd(fullText.slice(0, i));
+      scrollToBottom();
+    }, 33);
+  }
+  function pushCTA(buttons) {
+    var row = document.createElement('div');
+    row.className = 'ijv-cta';
+    buttons.forEach(function (b) {
+      var p = document.createElement('button');
+      p.type = 'button';
+      p.className = 'ijv-pill';
+      p.textContent = b.label;
+      p.addEventListener('click', b.onClick);
+      row.appendChild(p);
+    });
+    $msgs.appendChild(row);
+    scrollToBottom();
+    return row;
+  }
+  function showTyping() {
+    var t = document.createElement('div');
+    t.className = 'ijv-typing';
+    t.innerHTML = '<span></span><span></span><span></span>';
+    $msgs.appendChild(t);
+    scrollToBottom();
+    return t;
+  }
+  function removeEl(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
+
+  /* ---------------- Call al webhook del agente ---------------- */
+  function callAgent(message, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, CFG.timeoutMs);
+    return fetch(CFG.webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: message,
+        sessionId: getSessionId(),
+        origin: window.location.origin,
+        channel: 'web'
+      }),
+      signal: ctrl.signal
+    })
+    .then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .catch(function (err) {
+      clearTimeout(timer);
+      if (attempt < CFG.maxRetries) return callAgent(message, attempt + 1);
+      throw err;
+    });
+  }
+
+  /* ---------------- Lead form (honeypot anti-bot) ---------------- */
+  function showLeadForm(prefill) {
+    if ($msgs.querySelector('.ijv-form')) { scrollToBottom(); return; }
+    prefill = prefill || {};
+    var form = document.createElement('form');
+    form.className = 'ijv-form';
+    form.innerHTML =
+      '<h4>Déjanos tus datos y te contactamos</h4>' +
+      '<input type="text" name="nombre" placeholder="Nombre completo *" required value="' + escapeHtml(prefill.nombre || '') + '">' +
+      '<input type="email" name="email" placeholder="Correo electrónico *" required value="' + escapeHtml(prefill.email || '') + '">' +
+      '<input type="tel" name="telefono" placeholder="Teléfono / WhatsApp (opcional)" value="' + escapeHtml(prefill.telefono || '') + '">' +
+      '<textarea name="consulta" rows="2" placeholder="Cuéntanos brevemente (opcional)"></textarea>' +
+      '<input type="text" name="hp" class="ijv-hp" tabindex="-1" autocomplete="off">' +
+      /* Línea legal del formulario: el footer del chat enlaza la política, pero el
+       * formulario es donde el usuario ENTREGA sus datos — ahí tiene que estar el
+       * enlace (regla #14, misma lógica) y el recordatorio de qué NO mandar por
+       * este medio. La segunda frase se ajusta al vertical: un prestador de salud
+       * (legal.datos_salud) pide explícitamente no enviar estudios clínicos. */
+      '<p class="ijv-legal">Al enviar aceptas el tratamiento de tus datos conforme al ' +
+        '<a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">aviso de privacidad</a>. ' +
+        'No compartas por este medio información sensible ni documentos personales.</p>' +
+      '<button type="submit">Enviar</button>';
+    $msgs.appendChild(form);
+    scrollToBottom();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var fd = new FormData(form);
+      fetch(CFG.leadsWebhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: fd.get('nombre'),
+          email: fd.get('email'),
+          telefono: fd.get('telefono'),
+          consulta: fd.get('consulta'),
+          hp: fd.get('hp'),
+          session_id: getSessionId(),
+          origin: window.location.origin
+        })
+      })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r; })
+      .then(function () {
+        removeEl(form);
+        pushBot('¡Listo! Recibimos tus datos. El equipo de ' + CFG.clientName + ' te contacta muy pronto.', { instant: true });
+        afterLeadCTA();
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Reintentar';
+        pushBot('Hubo un problema al enviar. Por favor intenta de nuevo.', { instant: true });
+      });
+    });
+  }
+
+  /* Regla #20: el usuario que dejó datos está CALIENTE — no cerrar con
+   * "te escribimos pronto" seco: CTA inmediato a Calendly / WhatsApp. */
+  function afterLeadCTA() {
+
+
+    pushCTA([
+      { label: 'Escribir por WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }
+    ]);
+
+  }
+
+  /* ---------------- Intent helpers ---------------- */
+
+  function wantsWhatsapp(text) {
+    return /\b(wh?at?s?app|wsp|whats|wasap)\b/i.test(text || '');
+  }
+
+  function wantsContactForm(text) {
+    return /\b(lead|llama(me|r)|mis datos|dejo mis datos|d[ée]jame datos|quiero que me contacten)\b/i.test(text || '');
+  }
+
+  /* ---------------- Envío de mensajes ---------------- */
+  function send(text) {
+    text = (text || '').trim();
+    if (!text || isBusy) return;
+    pushUser(text);
+    $input.value = '';
+    autoSize();
+    isBusy = true;
+    $send.disabled = true;
+
+    var typing = showTyping();
+
+    callAgent(text)
+      .then(function (data) {
+        removeEl(typing);
+        var reply = (data && (data.output || data.response || data.text)) || 'Disculpa, no pude procesar tu mensaje. ¿Puedes reformularlo?';
+        pushBot(reply);
+
+        var showsForm = (data && (data.lead_intent || data.showForm)) || wantsContactForm(text);
+        var wantsContactBtn = /\b(equipo|contactar|asesor|coordinar)\b/i.test(reply);
+        var ctas = [];
+
+        if ((data && data.whatsapp) || wantsWhatsapp(text)) {
+          ctas.push({ label: 'WhatsApp ' + CFG.whatsappNumber, onClick: function () { window.open(CFG.whatsappLink, '_blank'); } });
+        }
+
+        /* Regla #18: botón persistente, NUNCA auto-open que tape la respuesta */
+        if (wantsContactBtn && !showsForm) {
+          ctas.push({ label: 'Contactar al equipo', onClick: function () { showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono }); } });
+        }
+        if (ctas.length) pushCTA(ctas);
+        if (showsForm) showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono });
+      })
+      .catch(function () {
+        removeEl(typing);
+        pushBot('Ups, tuve un problema de conexión. ¿Puedes intentarlo de nuevo? También puedes escribirnos por WhatsApp al **' + CFG.whatsappNumber + '**.', { instant: true });
+
+        pushCTA([{ label: 'WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }]);
+
+      })
+      .then(function () {
+        isBusy = false;
+        $send.disabled = false;
+        $input.focus();
+      });
+  }
+
+  /* ---------------- Auto-resize textarea ---------------- */
+  function autoSize() {
+    $input.style.height = 'auto';
+    $input.style.height = Math.min($input.scrollHeight, 100) + 'px';
+  }
+  $input.addEventListener('input', autoSize);
+  $input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      send($input.value);
+    }
+  });
+  $send.addEventListener('click', function () { send($input.value); });
+
+  /* ---------------- Welcome + quick buttons ---------------- */
+  function showWelcome() {
+    /* El welcome NO pasa por send(): jamás dispara detección de lead (regla #18) */
+    pushBot(CFG.welcomeMessage, { instant: true, skipSave: true });
+    if (QUICK_BUTTONS.length) {
+      pushCTA(QUICK_BUTTONS.map(function (b) {
+        return { label: b.label, onClick: function () { send(b.mensaje); } };
+      }));
+    }
+  }
+  function restoreHistory() {
+    var hist = loadMessages();
+    if (!hist.length) return false;
+    hist.forEach(function (m) {
+      if (m.role === 'user') pushUser(m.text, { skipSave: true });
+      else pushBot(m.text, { instant: true, skipSave: true });
+    });
+    return true;
+  }
+
+  /* ---------------- Open / close / reset ---------------- */
+  function openChat() {
+    isOpen = true;
+    root.classList.add('ijv-open');
+    launcher.style.display = 'none';
+    if (!welcomed) {
+      welcomed = true;
+      getSessionId(); /* aplica TTL antes de restaurar */
+      if (!restoreHistory()) showWelcome();
+    }
+    setTimeout(function () { $input.focus(); }, 200);
+  }
+  function closeChat() {
+    isOpen = false;
+    root.classList.remove('ijv-open');
+    launcher.style.display = 'flex';
+  }
+  launcher.addEventListener('click', openChat);
+  $close.addEventListener('click', closeChat);
+  $reset.addEventListener('click', function () {
+    resetSession();
+    $msgs.innerHTML = '';
+    showToast('Conversación reiniciada');
+    setTimeout(showWelcome, 250);
+  });
+
+  /* ---------------- API pública opcional ---------------- */
+  window.itmtractorAgent = {
+    open:  openChat,
+    close: closeChat,
+    reset: function () { $reset.click(); },
+    send:  send
+  };
+})();
+
+  </script>
+</body>
+</html>
